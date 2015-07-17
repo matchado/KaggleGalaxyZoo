@@ -1,9 +1,3 @@
-# execfile(r"C:\Users\Gregory\Desktop\GalaxyZooGithub\train.py")
-
-## set the value of the variable 's'
-## to crop the image before feature extraction
-## s = 120 seems to be good
-## s = 140 seems to be like the perfect fit
 
 from __future__ import division
 
@@ -25,7 +19,6 @@ images_dir = data_folder + "images_training_rev1/"
 ## set the number of images to be used for training
 ## select a small number to check results quickly
 n_rows = 10000
-n_rows = 1000
 
 ## extracting various features from the images
 
