@@ -8,7 +8,7 @@ from sklearn.externals import joblib
 import theano.tensor as T
 import theano
 from theano.tensor import nnet as NN
-from galaxy_zoo_helper_v2 import *
+from feature_extraction import *
 
 def process_test(names, indexes, trained_models_mlp, pc_model, output_path, subset):
 	# feed in array of image ids
