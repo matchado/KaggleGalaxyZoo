@@ -20,5 +20,9 @@ final predictions using these.
 Dependencies
 ===============
 
+numpy
 
+scipy
+
+pandas
 
