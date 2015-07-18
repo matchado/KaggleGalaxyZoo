@@ -55,7 +55,7 @@ def join_together(source_folder, ouput_file_name):
 	final.to_csv(ouput_file_name, index = False, encoding = 'utf-8', cols = [u"GalaxyID", u'Class1.1', u'Class1.2', u'Class1.3', u'Class2.1', u'Class2.2', u'Class3.1', u'Class3.2', u'Class4.1', u'Class4.2', u'Class5.1', u'Class5.2', u'Class5.3', u'Class5.4', u'Class6.1', u'Class6.2', u'Class7.1', u'Class7.2', u'Class7.3', u'Class8.1', u'Class8.2', u'Class8.3', u'Class8.4', u'Class8.5', u'Class8.6', u'Class8.7', u'Class9.1', u'Class9.2', u'Class9.3', u'Class10.1', u'Class10.2', u'Class10.3', u'Class11.1', u'Class11.2', u'Class11.3', u'Class11.4', u'Class11.5', u'Class11.6'])
 
 
-data_folder = 'G:/GREGO/Kaggle/galaxy_zoo/original_files/'
+data_folder = '/path/to/competition/data/'
 test_images_dir = data_folder + 'images_test_rev1/'
 
 names = sorted([int(x[:6]) for x in os.listdir(test_images_dir)])
