@@ -1,19 +1,20 @@
 
+## Contains all of the functions which are used to extract features from the images
+## All the functions have been parallelized by throwing them into a wrapper function
+## and using "Parallel" from joblib module
 
 from __future__ import division
 
 import numpy as np
 from joblib import Parallel, delayed
-from sklearn.preprocessing import StandardScaler
 import numpy as np
-import pandas as pd
 import mahotas, cv2, math
 from scipy import ndimage
 from skimage.filter import threshold_otsu
 from EllipseFitter import EllipseFitter
 from sklearn.cluster import KMeans
 from scipy.stats import describe
-from sklearn.base import clone
+
 
 def replace_with_feature_means(ar):
 	## use this to process the angles_and_sides features to replace
@@ -28,7 +29,7 @@ def replace_with_feature_means(ar):
 def get_ellipse_axes_p(images_dir, id_number, s = 140):
 	## pass in id of the image
 	## value of s = 120 seems to be the best so far based on trial and error
-	## s = 140 seems to be better than 120 but i have apprehensions that it might be too small an image
+	## s = 140 seems to be better than 120 but it might be too small an image
 	im = mahotas.imread(images_dir + str(id_number) + ".jpg", as_grey = True)
 	im = im[s:-s,s:-s]
 	mask_otsu = im > threshold_otsu(im)
@@ -126,7 +127,7 @@ def get_data_to_do_pca(images_dir, i_ds, s):
 def calculate_mean_shape_size_p(images_dir, id_number, s = 120, gauss = None):
 	## mostly use only 120 for this
 	## 140 seems to be too exact a fit
-	## add max/min, max/mean, min/mean
+	## added max/min, max/mean, min/mean
 	im = mahotas.imread(images_dir + str(id_number) + ".jpg", as_grey = True)[s:-s,s:-s]
 	if gauss:
 		im = ndimage.filters.gaussian_filter1d(im, gauss)
