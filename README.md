@@ -20,13 +20,5 @@ final predictions using these.
 Dependencies
 ===============
 
-numpy
-scipy
-pandas
-sklearn
-skimage
-joblib
-mahotas
-cv2
-EllipseFitter
-theano
+
+
