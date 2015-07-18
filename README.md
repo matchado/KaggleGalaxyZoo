@@ -21,8 +21,6 @@ Dependencies
 ===============
 
 numpy
-
 scipy
-
 pandas
 
