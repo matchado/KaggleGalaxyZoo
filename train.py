@@ -11,7 +11,7 @@ from theano_mlp import train_and_get_model_props
 
 ## set the path to the folder with the competition data
 ## assumes that this path has the file named "training_solutions_rev1.csv" and the folder "images_training_rev1" in it
-data_folder = 'G:/GREGO/Kaggle/galaxy_zoo/original_files/'
+data_folder = '/path/to/competition/data/'
 	
 train_solutions = pd.read_csv(data_folder + "training_solutions_rev1.csv")
 images_dir = data_folder + "images_training_rev1/"
