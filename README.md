@@ -20,7 +20,8 @@ final predictions using these.
 Dependencies
 ===============
 
-numpy
-scipy
-pandas
+numpy  
+scipy  
+pandas  
+sklearn  
 
