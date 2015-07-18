@@ -17,7 +17,6 @@ Next `predict_test_images.py` is run which extracts the necessary features from 
 final predictions using these.
 
 
-===============
 Dependencies
 ===============
 
