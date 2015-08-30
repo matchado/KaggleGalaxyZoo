@@ -7,7 +7,6 @@ from __future__ import division
 
 import numpy as np
 from joblib import Parallel, delayed
-import numpy as np
 import mahotas, cv2, math
 from scipy import ndimage
 from skimage.filter import threshold_otsu
